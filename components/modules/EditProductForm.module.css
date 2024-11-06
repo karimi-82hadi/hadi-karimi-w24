@@ -1,0 +1,55 @@
+.editForm p {
+  font-size: 20px;
+}
+
+.inputContainer {
+  margin-top: 30px;
+}
+
+.inputContainer div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.inputContainer div:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.inputContainer div label {
+  font-size: 14px;
+}
+
+.inputContainer div input {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
+.editForm > div:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.editForm button {
+  width: 185px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.editForm button:first-child {
+  color: #fff;
+  background-color: #55a3f0;
+}
+
+.editForm button:last-child {
+  background-color: #dfdfdf;
+}

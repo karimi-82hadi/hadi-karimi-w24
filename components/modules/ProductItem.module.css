@@ -1,0 +1,32 @@
+.deleteModal > div:last-child {
+  margin-top: 50px;
+}
+
+.deleteModal p {
+  font-size: 20px;
+}
+
+.deleteModal > div:last-child div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.deleteModal button {
+  width: 185px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.deleteModal button:first-child {
+  color: #fff;
+  background-color: #f43f5e;
+}
+
+.deleteModal button:last-child {
+  background-color: #dfdfdf;
+}
