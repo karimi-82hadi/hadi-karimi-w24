@@ -1,4 +1,5 @@
-import api from "../configs/axios";
+import api from "@/configs/axios";
+import { getCookie } from "@/utils/cookie";
 
 const signinUser = async (data) => {
   try {
@@ -18,4 +19,19 @@ const loginUser = async (data) => {
   }
 };
 
-export { signinUser, loginUser };
+const authorization = (router) => {
+  const pathname = router.pathname;
+  const token = getCookie("ProMgt:Next:Token");
+
+  switch (pathname) {
+    case "/account":
+      if (!token) router.push("/login");
+      break;
+
+    case "/login":
+      if (token) router.push("/account");
+      break;
+  }
+};
+
+export { signinUser, loginUser, authorization };

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { getCookie } from "../utils/cookie";
+import { getCookie } from "@/utils/cookie";
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
@@ -9,8 +9,8 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (request) => {
-    const accToken = getCookie("accToken");
-    accToken && (request.headers["Authorization"] = `bearer ${accToken}`);
+    const token = getCookie("ProMgt:Next:Token");
+    token && (request.headers["Authorization"] = `bearer ${token}`);
     return request;
   },
   (error) => {

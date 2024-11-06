@@ -1,5 +1,5 @@
 const setCookie = (cookieName, maxAge) => {
-  document.cookie = `accToken=${cookieName}; max-age=${maxAge}`;
+  document.cookie = `ProMgt:Next:Token=${cookieName}; max-age=${maxAge}`;
 };
 
 const getCookie = (cookieName) => {

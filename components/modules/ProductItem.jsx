@@ -54,12 +54,12 @@ function ProductItem({ data: productData, page, setPage }) {
           <div>
             <button onClick={() => setEditModal(true)}>
               <svg style={{ fill: "none", width: "20px", height: "20px" }}>
-                <use href="/src/assets/icons/static_symbol.svg#icon-edit"></use>
+                <use href="/icons/static_symbol.svg#icon-edit"></use>
               </svg>
             </button>
             <button onClick={() => setDeleteModal(true)}>
               <svg style={{ fill: "none", width: "20px", height: "20px" }}>
-                <use href="/src/assets/icons/static_symbol.svg#icon-trash"></use>
+                <use href="/icons/static_symbol.svg#icon-trash"></use>
               </svg>
             </button>
           </div>
@@ -70,7 +70,7 @@ function ProductItem({ data: productData, page, setPage }) {
           <div className={styles.deleteModal}>
             <div>
               <svg style={{ fill: "none", width: "96px", height: "98px" }}>
-                <use href="/src/assets/icons/static_symbol.svg#icon-close"></use>
+                <use href="/icons/static_symbol.svg#icon-close"></use>
               </svg>
             </div>
             <div>

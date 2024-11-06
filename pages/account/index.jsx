@@ -40,13 +40,13 @@ function AccountPage() {
       <div className={styles.headerSearch}>
         <div className={styles.headerInput}>
           <svg style={{ fill: "none", width: "24px", height: "24px" }}>
-            <use href="/src/assets/icons/static_symbol.svg#icon-search"></use>
+            <use href="/icons/static_symbol.svg#icon-search"></use>
           </svg>
           <input type="text" placeholder="جستجو کالا" readOnly />
         </div>
         <div className={styles.headerProfile}>
           <div style={{ display: "flex" }}>
-            <img src="/src/assets/images/user.png" alt="هادی کریمی" />
+            <img src="/images/user.png" alt="هادی کریمی" />
           </div>
           <div>
             <p>هادی کریمی</p>
@@ -58,7 +58,7 @@ function AccountPage() {
         <div className={styles.mainHeader}>
           <div>
             <svg style={{ fill: "none", width: "30px", height: "30px" }}>
-              <use href="/src/assets/icons/static_symbol.svg#icon-setting"></use>
+              <use href="/icons/static_symbol.svg#icon-setting"></use>
             </svg>
             <h2>مدیریت کالا</h2>
           </div>

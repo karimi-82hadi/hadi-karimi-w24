@@ -53,7 +53,7 @@ function LoginPage() {
         <form onSubmit={submitHandler}>
           <div className={styles.formHeader}>
             <svg style={{ width: "80px", height: "85px" }}>
-              <use href="/src/assets/icons/static_symbol.svg#icon-logo"></use>
+              <use href="/icons/static_symbol.svg#icon-logo"></use>
             </svg>
             <h1>فرم ورود</h1>
           </div>
