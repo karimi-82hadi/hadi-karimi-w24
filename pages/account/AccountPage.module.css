@@ -1,0 +1,155 @@
+.container {
+  width: 100%;
+  max-width: 1156px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.headerSearch {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 16px;
+  margin-top: 30px;
+}
+
+.headerInput {
+  width: calc(100% - 200px);
+  position: relative;
+}
+
+.headerInput svg {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  bottom: 0;
+  margin: auto;
+}
+
+.headerInput input {
+  width: calc(100% - 54px);
+  margin-right: 54px;
+  padding: 24px 25px;
+  font-size: 16px;
+}
+
+.headerProfile {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 25px;
+  border-right: 1px solid #e4e4e4;
+  line-height: 1;
+}
+
+.headerProfile img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.headerProfile p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.headerProfile span {
+  font-size: 14px;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainHeader div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mainHeader button {
+  font-size: 16px;
+  color: #fff;
+  background-color: #55a3f0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.mainContent {
+  height: 737px;
+  background-color: #fff;
+  margin-top: 10px;
+  border: 1px solid #e4e4e4;
+  border-radius: 30px;
+  overflow-x: auto;
+}
+
+.mainContent table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.mainContent table thead {
+  font-size: 16px;
+  background-color: #f2f2f2;
+}
+
+.mainContent table thead th {
+  text-align: right;
+  padding: 23px 10px;
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+}
+
+.mainContent table tbody {
+  font-size: 14px;
+}
+
+.mainContent table tbody tr {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.mainContent table tbody td {
+  padding: 12px 10px;
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+}
+
+.mainContent table tbody td div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.mainContent table tbody td button {
+  display: flex;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+  .mainContent table thead th:nth-child(2),
+  .mainContent table tbody td:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mainContent table thead th:nth-child(4),
+  .mainContent table tbody td:nth-child(4) {
+    display: none;
+  }
+}
