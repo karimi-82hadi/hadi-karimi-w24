@@ -2,13 +2,13 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-import ProductItem from "../components/ProductItem";
-import Modal from "../components/Modal";
-import AddProductForm from "../components/AddProductForm";
-import Pagination from "../components/Pagination";
-import Loader from "../shared/Loader";
-import api from "../configs/axios";
-import { getProducts } from "../services/user";
+import ProductItem from "../../components/modules/ProductItem";
+import Modal from "../../components/modules/Modal";
+import AddProductForm from "../../components/modules/AddProductForm";
+import Pagination from "../../components/modules/Pagination";
+import Loader from "../../components/shared/Loader";
+import api from "../../configs/axios";
+import { getProducts } from "../../services/user";
 
 import styles from "./AccountPage.module.css";
 

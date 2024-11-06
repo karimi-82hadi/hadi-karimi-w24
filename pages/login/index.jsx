@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import { loginUser } from "../services/auth";
-import { setCookie } from "../utils/cookie";
+import { loginUser } from "../../services/auth";
+import { setCookie } from "../../utils/cookie";
 
 import styles from "./LoginPage.module.css";
 
