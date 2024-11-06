@@ -41,9 +41,7 @@ function SignupPage() {
 
     if (res) {
       toast.success("ثبت نام با موفقیت انجام شد.");
-      setTimeout(() => {
-        router.push("/login");
-      }, 3000);
+      router.push("/login");
       return;
     }
 

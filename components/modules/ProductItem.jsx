@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 import Modal from "./Modal";
 import EditProductForm from "./EditProductForm";
@@ -9,8 +10,10 @@ import { getProducts } from "@/services/user";
 import { e2p, sp } from "@/utils/numbers";
 
 import styles from "./ProductItem.module.css";
+import { authorization } from "@/services/auth";
 
 function ProductItem({ data: productData, page, setPage }) {
+  const router = useRouter();
   const { id, name, price, quantity } = productData;
   const [deleteModal, setDeleteModal] = useState(false);
   const [editModal, setEditModal] = useState(false);
@@ -28,6 +31,10 @@ function ProductItem({ data: productData, page, setPage }) {
       data.data.length === 1 && setPage((page) => page > 1 && page - 1);
       return toast.success("محصول با موفقیت حذف شد.");
     } catch (err) {
+      if (err.status === 401) {
+        authorization(router);
+        return toast.error("برای حذف محصول باید وارد شوید.");
+      }
       return toast.error("هنگام حذف کردن محصول مشکلی پیش آمد.");
     }
   };
@@ -39,6 +46,10 @@ function ProductItem({ data: productData, page, setPage }) {
       refetch();
       return toast.success("محصول با موفقیت بروزرسانی شد.");
     } catch (err) {
+      if (err.status === 401) {
+        authorization(router);
+        return toast.error("برای بروزرسانی محصول باید وارد شوید.");
+      }
       return toast.error("هنگام ثبت اطلاعات محصول مشکلی پیش آمد.");
     }
   };

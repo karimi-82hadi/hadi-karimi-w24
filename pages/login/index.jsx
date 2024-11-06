@@ -35,9 +35,7 @@ function LoginPage() {
     if (res) {
       setCookie(res.token, 24 * 60 * 60);
       toast.success("با موفقیت وارد حساب کاربری شدید.");
-      setTimeout(() => {
-        router.push("/account");
-      }, 3000);
+      router.push("/account");
       return;
     }
 
