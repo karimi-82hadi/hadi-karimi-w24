@@ -3,8 +3,8 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
-import { loginUser } from "../../services/auth";
-import { setCookie } from "../../utils/cookie";
+import { loginUser } from "@/services/auth";
+import { setCookie } from "@/utils/cookie";
 
 import styles from "./LoginPage.module.css";
 

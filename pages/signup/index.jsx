@@ -3,7 +3,7 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
-import { signinUser } from "../../services/auth";
+import { signinUser } from "@/services/auth";
 
 import styles from "./SignupPage.module.css";
 

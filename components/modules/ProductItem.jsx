@@ -4,9 +4,9 @@ import { toast } from "react-toastify";
 
 import Modal from "./Modal";
 import EditProductForm from "./EditProductForm";
-import api from "../../configs/axios";
-import { getProducts } from "../../services/user";
-import { e2p, sp } from "../../utils/numbers";
+import api from "@/configs/axios";
+import { getProducts } from "@/services/user";
+import { e2p, sp } from "@/utils/numbers";
 
 import styles from "./ProductItem.module.css";
 
