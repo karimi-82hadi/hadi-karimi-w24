@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 import { loginUser } from "../../services/auth";
 import { setCookie } from "../../utils/cookie";
@@ -8,7 +9,7 @@ import { setCookie } from "../../utils/cookie";
 import styles from "./LoginPage.module.css";
 
 function LoginPage() {
-  const naviagate = useNavigate();
+  const router = useRouter();
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -35,7 +36,7 @@ function LoginPage() {
       setCookie(res.token, 24 * 60 * 60);
       toast.success("با موفقیت وارد حساب کاربری شدید.");
       setTimeout(() => {
-        naviagate("/account");
+        router.push("/account");
       }, 3000);
       return;
     }
@@ -74,7 +75,7 @@ function LoginPage() {
           </div>
           <div className={styles.formFooter}>
             <button type="submit">ورود</button>
-            <Link to="/signup">ایجاد حساب کاربری؟</Link>
+            <Link href="/signup">ایجاد حساب کاربری؟</Link>
           </div>
         </form>
       </div>

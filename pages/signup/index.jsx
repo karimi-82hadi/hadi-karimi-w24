@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 import { signinUser } from "../../services/auth";
 
 import styles from "./SignupPage.module.css";
 
 function SignupPage() {
-  const naviagate = useNavigate();
+  const router = useRouter();
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -41,7 +42,7 @@ function SignupPage() {
     if (res) {
       toast.success("ثبت نام با موفقیت انجام شد.");
       setTimeout(() => {
-        naviagate("/login");
+        router.push("/login");
       }, 3000);
       return;
     }
@@ -87,7 +88,7 @@ function SignupPage() {
           </div>
           <div className={styles.formFooter}>
             <button type="submit">ثبت نام</button>
-            <Link to="/login">حساب کاربری دارید؟</Link>
+            <Link href="/login">حساب کاربری دارید؟</Link>
           </div>
         </form>
       </div>
