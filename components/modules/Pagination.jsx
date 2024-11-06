@@ -34,17 +34,14 @@ function Pagination({ page, setPage, maxPage }) {
             <button className={styles.selected}>{page}</button>
           </>
         )}
+        {maxPage > 2 && <span>...</span>}
         {maxPage > 1 && (
-          <>
-            {" "}
-            <span>...</span>
-            <button
-              onClick={() => setPage(maxPage)}
-              className={page === maxPage ? styles.selected : undefined}
-            >
-              {maxPage}
-            </button>
-          </>
+          <button
+            onClick={() => setPage(maxPage)}
+            className={page === maxPage ? styles.selected : undefined}
+          >
+            {maxPage}
+          </button>
         )}
       </div>
       <div>
